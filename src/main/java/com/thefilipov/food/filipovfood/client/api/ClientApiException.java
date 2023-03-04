@@ -19,7 +19,7 @@ public class ClientApiException extends RuntimeException {
     public ClientApiException(String message, RestClientResponseException cause) {
         super(message, cause);
 
-        //log.error(cause.getResponseBodyAsString());
+        log.info(cause.getResponseBodyAsString());
         deserializeProblem(cause);
     }
 
